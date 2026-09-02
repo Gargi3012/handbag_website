@@ -1,0 +1,543 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AVANI ATELIER | Fine Leathercraft & Sculptural Handbags</title>
+  
+  <!-- Google Fonts: Cormorant Garamond & Plus Jakarta Sans -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            marceau: {
+              bone: '#F9F7F4',
+              sand: '#ECE5DC',
+              cognac: '#8D4925',
+              cognacHover: '#723719',
+              gold: '#C8A97E',
+              noir: '#181412',
+              linen: '#756D66',
+              border: '#E2D9CE'
+            }
+          },
+          fontFamily: {
+            serif: ['"Cormorant Garamond"', 'serif'],
+            sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+  <style>
+    .glass-nav {
+      background: rgba(249, 247, 244, 0.90);
+      backdrop-filter: blur(16px);
+      -webkit-backdrop-filter: blur(16px);
+      border-bottom: 1px solid rgba(226, 217, 206, 0.6);
+    }
+    .hide-scrollbar::-webkit-scrollbar { display: none; }
+    .hide-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .pb-safe { padding-bottom: env(safe-area-inset-bottom, 0.5rem); }
+  </style>
+</head>
+<body class="bg-marceau-bone text-marceau-noir font-sans antialiased selection:bg-marceau-cognac selection:text-white pb-24 md:pb-0">
+
+  <!-- 1. Top Announcement Bar -->
+  <div class="bg-marceau-noir text-marceau-bone text-[10px] sm:text-[11px] font-medium tracking-widest uppercase py-2 px-4 text-center">
+    Free Express All-India Delivery & Easy 7-Day Returns • 100% Genuine Leather
+  </div>
+
+  <!-- 2. Transparent Floating Header Navigation -->
+  <header class="sticky top-0 z-40 glass-nav px-4 sm:px-6 py-3.5">
+    <div class="max-w-7xl mx-auto flex items-center justify-between">
+      <!-- Left Links -->
+      <div class="hidden md:flex items-center space-x-8 text-xs font-semibold uppercase tracking-widest text-marceau-linen">
+        <a href="#signature" class="hover:text-marceau-cognac transition">Campaign</a>
+        <a href="#collection" class="hover:text-marceau-cognac transition">Collections</a>
+        <a href="#lifestyle" class="hover:text-marceau-cognac transition">Lookbook</a>
+        <a href="#craft" class="hover:text-marceau-cognac transition">Quality</a>
+        <a href="#boutique" class="hover:text-marceau-cognac transition">Studio</a>
+      </div>
+
+      <!-- Center Logo -->
+      <a href="#" class="font-serif text-2xl sm:text-3xl font-normal tracking-[0.2em] uppercase text-marceau-noir text-center">
+        Avani Atelier
+      </a>
+
+      <!-- Right Utility Actions -->
+      <div class="flex items-center space-x-4 sm:space-x-5 text-sm">
+        <button class="hover:text-marceau-cognac transition p-1 cursor-pointer" title="Search">
+          <svg class="w-4 h-4 text-marceau-noir" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+            <circle cx="11" cy="11" r="7"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+        </button>
+        <button class="hover:text-marceau-cognac transition text-lg p-1 cursor-pointer" title="Wishlist">♡</button>
+        <button onclick="toggleCartDrawer(true)" class="hidden md:flex items-center space-x-2 px-3.5 sm:px-4 py-2 rounded-full bg-marceau-noir text-marceau-bone text-xs font-medium tracking-wider uppercase hover:bg-marceau-cognac transition cursor-pointer min-h-[44px]">
+          <span>Bag</span>
+          <span id="nav-cart-counter" class="w-4 h-4 rounded-full bg-marceau-cognac text-white text-[10px] flex items-center justify-center font-bold">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- 3. Full-Width Editorial Campaign Hero Banner (AVANI ATELIER) -->
+  <section id="signature" class="relative w-full h-[88vh] md:h-[92vh] overflow-hidden">
+    <!-- Full-Bleed Campaign Image -->
+    <img src="saved_images/01_hero_signature_tote.jpg" 
+         alt="Avani Atelier Signature Leather Tote Campaign" 
+         class="absolute inset-0 w-full h-full object-cover object-center" />
+
+    <!-- Top Gradient Overlay for Legibility -->
+    <div class="absolute inset-0 bg-gradient-to-b from-black/75 via-black/20 to-transparent pointer-events-none"></div>
+
+    <!-- Crisp Legible Title at Top-Left (Zero Bag Obstruction) -->
+    <div class="absolute top-6 left-6 sm:top-10 sm:left-10 lg:top-12 lg:left-16 z-20 max-w-xl text-left space-y-1">
+      <p class="text-[10px] sm:text-xs font-semibold uppercase tracking-[0.3em] text-white/90">
+        NEW DELHI & FLORENCE
+      </p>
+      <h1 class="font-serif text-4xl sm:text-6xl lg:text-7xl font-medium tracking-[0.2em] uppercase text-white drop-shadow-lg leading-tight">
+        A V A N I
+      </h1>
+      <p class="text-xs sm:text-sm font-serif italic text-white/90">
+        Handcrafted Luxury Leathercraft
+      </p>
+    </div>
+
+    <!-- CTA Button Anchored at BOTTOM-LEFT (Entire middle & bag 100% unobstructed) -->
+    <div class="absolute bottom-6 left-6 sm:bottom-10 sm:left-10 lg:bottom-12 lg:left-16 z-20">
+      <a href="#collection" class="px-7 py-3 rounded-full bg-white hover:bg-marceau-sand text-marceau-noir text-xs font-semibold tracking-widest uppercase shadow-xl transition backdrop-blur-sm cursor-pointer inline-flex items-center space-x-2 min-h-[44px]">
+        <span>Explore Collection</span>
+        <span>→</span>
+      </a>
+    </div>
+  </section>
+
+  <!-- 4. Curated Silhouettes Catalog -->
+  <section id="collection" class="py-12 sm:py-16 px-3 sm:px-6 max-w-7xl mx-auto border-t border-marceau-border">
+    <div class="flex flex-col sm:flex-row sm:items-end justify-between mb-6 sm:mb-8">
+      <div>
+        <span class="text-[11px] uppercase tracking-widest font-bold text-marceau-linen">Avani Collections</span>
+        <h2 class="font-serif text-2xl sm:text-4xl text-marceau-noir mt-1">Designed for Everyday Style</h2>
+      </div>
+      <!-- Tab Filters -->
+      <div class="flex space-x-2 mt-4 sm:mt-0 overflow-x-auto pb-1 hide-scrollbar">
+        <button onclick="filterBags('all')" id="tab-all" class="px-4 py-2 rounded-full bg-marceau-noir text-marceau-bone text-xs font-semibold tracking-wider uppercase transition cursor-pointer min-h-[44px]">All</button>
+        <button onclick="filterBags('crossbody')" id="tab-crossbody" class="px-4 py-2 rounded-full bg-marceau-sand/70 text-marceau-noir text-xs font-semibold tracking-wider uppercase hover:bg-marceau-sand transition cursor-pointer min-h-[44px]">Crossbody</button>
+        <button onclick="filterBags('tote')" id="tab-tote" class="px-4 py-2 rounded-full bg-marceau-sand/70 text-marceau-noir text-xs font-semibold tracking-wider uppercase hover:bg-marceau-sand transition cursor-pointer min-h-[44px]">Totes</button>
+        <button onclick="filterBags('hobo')" id="tab-hobo" class="px-4 py-2 rounded-full bg-marceau-sand/70 text-marceau-noir text-xs font-semibold tracking-wider uppercase hover:bg-marceau-sand transition cursor-pointer min-h-[44px]">Soft Hobo</button>
+        <button onclick="filterBags('evening')" id="tab-evening" class="px-4 py-2 rounded-full bg-marceau-sand/70 text-marceau-noir text-xs font-semibold tracking-wider uppercase hover:bg-marceau-sand transition cursor-pointer min-h-[44px]">Evening</button>
+      </div>
+    </div>
+
+    <!-- Product Grid -->
+    <div id="product-grid" class="grid grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
+      
+      <!-- Bag 1: Crossbody -->
+      <div class="product-item bg-white p-3 sm:p-4 rounded-2xl sm:rounded-3xl border border-marceau-border shadow-sm hover:shadow-md transition group flex flex-col justify-between" data-category="crossbody">
+        <div>
+          <div class="relative h-36 sm:h-60 rounded-xl sm:rounded-2xl overflow-hidden bg-marceau-sand mb-2.5">
+            <img id="card-img-crossbody" 
+                 src="saved_images/04_sculptural_crossbody.jpg" 
+                 alt="The Luna Crossbody" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+
+          <!-- Angle Toggle Pills -->
+          <div class="flex items-center space-x-1 mb-2">
+            <button onclick="setCardView('card-img-crossbody', 'saved_images/04_sculptural_crossbody.jpg')" class="px-2 py-0.5 rounded-md bg-marceau-sand/80 text-marceau-noir text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider hover:bg-marceau-cognac hover:text-white transition cursor-pointer">Bag</button>
+            <button onclick="setCardView('card-img-crossbody', 'saved_images/08_crossbody_in_motion.jpg')" class="px-2 py-0.5 rounded-md bg-marceau-sand/80 text-marceau-noir text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider hover:bg-marceau-cognac hover:text-white transition cursor-pointer">Style</button>
+          </div>
+
+          <div class="flex flex-col sm:flex-row justify-between sm:items-baseline mb-1">
+            <h3 class="font-serif text-sm sm:text-lg font-medium text-marceau-noir leading-tight">The Luna Crossbody</h3>
+            <span class="text-xs sm:text-sm font-bold text-marceau-cognac mt-0.5 sm:mt-0">₹3,490</span>
+          </div>
+          <p class="text-[10px] sm:text-xs text-marceau-linen mb-2.5 line-clamp-2">Half-moon curved design with adjustable strap.</p>
+        </div>
+        <button onclick="addToBag('The Luna Crossbody', 3490, 'saved_images/04_sculptural_crossbody.jpg')" class="w-full py-2.5 rounded-xl bg-marceau-noir hover:bg-marceau-cognac text-white text-[11px] sm:text-xs font-semibold uppercase tracking-wider transition cursor-pointer min-h-[44px] flex items-center justify-center">
+          + Add to Bag
+        </button>
+      </div>
+
+      <!-- Bag 2: Tote -->
+      <div class="product-item bg-white p-3 sm:p-4 rounded-2xl sm:rounded-3xl border border-marceau-border shadow-sm hover:shadow-md transition group flex flex-col justify-between" data-category="tote">
+        <div>
+          <div class="relative h-36 sm:h-60 rounded-xl sm:rounded-2xl overflow-hidden bg-marceau-sand mb-2.5">
+            <div class="absolute top-2 left-2 z-10 bg-marceau-noir/85 text-white text-[8px] sm:text-[9px] font-semibold uppercase tracking-wider px-2 py-0.5 rounded-full backdrop-blur-sm">
+              On Model
+            </div>
+            <img id="card-img-tote" 
+                 src="saved_images/05_structured_work_tote.jpg" 
+                 alt="The Trapeze Work Tote" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+
+          <!-- Micro View Switcher Pills -->
+          <div class="flex items-center space-x-1 mb-2">
+            <button onclick="setCardView('card-img-tote', 'saved_images/05_structured_work_tote.jpg')" class="px-2 py-0.5 rounded-md bg-marceau-sand/80 text-marceau-noir text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider hover:bg-marceau-cognac hover:text-white transition cursor-pointer">Bag</button>
+            <button onclick="setCardView('card-img-tote', 'saved_images/01_hero_signature_tote.jpg')" class="px-2 py-0.5 rounded-md bg-marceau-sand/80 text-marceau-noir text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider hover:bg-marceau-cognac hover:text-white transition cursor-pointer">Model</button>
+            <button onclick="setCardView('card-img-tote', 'saved_images/02_bag_interior_detail.jpg')" class="px-2 py-0.5 rounded-md bg-marceau-sand/80 text-marceau-noir text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider hover:bg-marceau-cognac hover:text-white transition cursor-pointer">Inside</button>
+          </div>
+
+          <div class="flex flex-col sm:flex-row justify-between sm:items-baseline mb-1">
+            <h3 class="font-serif text-sm sm:text-lg font-medium text-marceau-noir leading-tight">The Trapeze Work Tote</h3>
+            <span class="text-xs sm:text-sm font-bold text-marceau-cognac mt-0.5 sm:mt-0">₹4,850</span>
+          </div>
+          <p class="text-[10px] sm:text-xs text-marceau-linen mb-2.5 line-clamp-2">Spacious interior for 13-inch laptops, office & travel.</p>
+        </div>
+        <button onclick="addToBag('The Trapeze Work Tote', 4850, 'saved_images/05_structured_work_tote.jpg')" class="w-full py-2.5 rounded-xl bg-marceau-noir hover:bg-marceau-cognac text-white text-[11px] sm:text-xs font-semibold uppercase tracking-wider transition cursor-pointer min-h-[44px] flex items-center justify-center">
+          + Add to Bag
+        </button>
+      </div>
+
+      <!-- Bag 3: Hobo -->
+      <div class="product-item bg-white p-3 sm:p-4 rounded-2xl sm:rounded-3xl border border-marceau-border shadow-sm hover:shadow-md transition group flex flex-col justify-between" data-category="hobo">
+        <div>
+          <div class="relative h-36 sm:h-60 rounded-xl sm:rounded-2xl overflow-hidden bg-marceau-sand mb-2.5">
+            <img id="card-img-hobo" 
+                 src="saved_images/06_soft_hobo_bag.jpg" 
+                 alt="The Nappa Slouch Hobo" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+
+          <!-- Angle Toggle Pills -->
+          <div class="flex items-center space-x-1 mb-2">
+            <button onclick="setCardView('card-img-hobo', 'saved_images/06_soft_hobo_bag.jpg')" class="px-2 py-0.5 rounded-md bg-marceau-sand/80 text-marceau-noir text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider hover:bg-marceau-cognac hover:text-white transition cursor-pointer">Bag</button>
+            <button onclick="setCardView('card-img-hobo', 'saved_images/09_shoulder_bag_coat.jpg')" class="px-2 py-0.5 rounded-md bg-marceau-sand/80 text-marceau-noir text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider hover:bg-marceau-cognac hover:text-white transition cursor-pointer">Model</button>
+          </div>
+
+          <div class="flex flex-col sm:flex-row justify-between sm:items-baseline mb-1">
+            <h3 class="font-serif text-sm sm:text-lg font-medium text-marceau-noir leading-tight">The Nappa Slouch Hobo</h3>
+            <span class="text-xs sm:text-sm font-bold text-marceau-cognac mt-0.5 sm:mt-0">₹3,890</span>
+          </div>
+          <p class="text-[10px] sm:text-xs text-marceau-linen mb-2.5 line-clamp-2">Super-soft leather shoulder bag for daily wear.</p>
+        </div>
+        <button onclick="addToBag('The Nappa Slouch Hobo', 3890, 'saved_images/06_soft_hobo_bag.jpg')" class="w-full py-2.5 rounded-xl bg-marceau-noir hover:bg-marceau-cognac text-white text-[11px] sm:text-xs font-semibold uppercase tracking-wider transition cursor-pointer min-h-[44px] flex items-center justify-center">
+          + Add to Bag
+        </button>
+      </div>
+
+      <!-- Bag 4: Evening -->
+      <div class="product-item bg-white p-3 sm:p-4 rounded-2xl sm:rounded-3xl border border-marceau-border shadow-sm hover:shadow-md transition group flex flex-col justify-between" data-category="evening">
+        <div>
+          <div class="relative h-36 sm:h-60 rounded-xl sm:rounded-2xl overflow-hidden bg-marceau-sand mb-2.5">
+            <img id="card-img-evening" 
+                 src="saved_images/07_evening_flap_clutch.jpg" 
+                 alt="The Evening Box Clutch" 
+                 class="w-full h-full object-cover group-hover:scale-105 transition duration-500" />
+          </div>
+
+          <!-- Angle Toggle Pills -->
+          <div class="flex items-center space-x-1 mb-2">
+            <button onclick="setCardView('card-img-evening', 'saved_images/07_evening_flap_clutch.jpg')" class="px-2 py-0.5 rounded-md bg-marceau-sand/80 text-marceau-noir text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider hover:bg-marceau-cognac hover:text-white transition cursor-pointer">Bag</button>
+            <button onclick="setCardView('card-img-evening', 'saved_images/03_bag_hardware_base.jpg')" class="px-2 py-0.5 rounded-md bg-marceau-sand/80 text-marceau-noir text-[9px] sm:text-[10px] font-semibold uppercase tracking-wider hover:bg-marceau-cognac hover:text-white transition cursor-pointer">Brass</button>
+          </div>
+
+          <div class="flex flex-col sm:flex-row justify-between sm:items-baseline mb-1">
+            <h3 class="font-serif text-sm sm:text-lg font-medium text-marceau-noir leading-tight">The Evening Box Clutch</h3>
+            <span class="text-xs sm:text-sm font-bold text-marceau-cognac mt-0.5 sm:mt-0">₹2,490</span>
+          </div>
+          <p class="text-[10px] sm:text-xs text-marceau-linen mb-2.5 line-clamp-2">Sleek evening clutch with gold chain strap.</p>
+        </div>
+        <button onclick="addToBag('The Evening Box Clutch', 2490, 'saved_images/07_evening_flap_clutch.jpg')" class="w-full py-2.5 rounded-xl bg-marceau-noir hover:bg-marceau-cognac text-white text-[11px] sm:text-xs font-semibold uppercase tracking-wider transition cursor-pointer min-h-[44px] flex items-center justify-center">
+          + Add to Bag
+        </button>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 5. Editorial Lookbook Gallery -->
+  <section id="lifestyle" class="py-12 sm:py-16 px-4 sm:px-6 max-w-7xl mx-auto border-t border-marceau-border">
+    <div class="text-center max-w-xl mx-auto mb-8 sm:mb-10">
+      <span class="text-xs uppercase tracking-widest font-bold text-marceau-linen">Styled For You</span>
+      <h2 class="font-serif text-3xl sm:text-4xl text-marceau-noir mt-1">Carried Everywhere</h2>
+      <p class="text-xs text-marceau-linen mt-2">From work meetings to dinner dates and weekend travel.</p>
+    </div>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6 sm:gap-8">
+      <!-- Look 1 -->
+      <div class="rounded-2xl sm:rounded-3xl overflow-hidden bg-marceau-sand aspect-[4/3] shadow-lg border border-marceau-border group">
+        <img src="saved_images/08_crossbody_in_motion.jpg" 
+             alt="Crossbody in Motion" 
+             class="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+      </div>
+
+      <!-- Look 2 -->
+      <div class="rounded-2xl sm:rounded-3xl overflow-hidden bg-marceau-sand aspect-[4/3] shadow-lg border border-marceau-border group">
+        <img src="saved_images/09_shoulder_bag_coat.jpg" 
+             alt="Shoulder Bag Outfit" 
+             class="w-full h-full object-cover group-hover:scale-105 transition duration-700" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 6. Craftsmanship & Quality Section -->
+  <section id="craft" class="py-16 sm:py-20 bg-marceau-noir text-marceau-bone px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-center">
+      
+      <div class="lg:col-span-6 space-y-5 lg:space-y-6">
+        <span class="text-xs uppercase tracking-widest font-semibold text-marceau-gold">Master Leathercraft</span>
+        <h2 class="font-serif text-3xl sm:text-5xl font-light leading-tight">
+          Why Choose Our<br />
+          <span class="italic font-normal">Genuine Leather Quality.</span>
+        </h2>
+        <p class="text-marceau-sand/80 text-xs sm:text-sm leading-relaxed">
+          We use top-grade full-grain leather that gets softer and richer over time. Hand-stitched with waxed thread for long-lasting strength.
+        </p>
+
+        <div class="grid grid-cols-2 gap-3 sm:gap-4 pt-2 text-xs">
+          <div class="p-3.5 sm:p-4 rounded-2xl bg-white/5 border border-white/10">
+            <h4 class="font-serif text-base sm:text-lg text-marceau-gold mb-1">100% Genuine Leather</h4>
+            <p class="text-marceau-sand/70 text-[10px] sm:text-[11px]">Natural full-grain surface that ages gracefully.</p>
+          </div>
+          <div class="p-3.5 sm:p-4 rounded-2xl bg-white/5 border border-white/10">
+            <h4 class="font-serif text-base sm:text-lg text-marceau-gold mb-1">Solid Brass Fittings</h4>
+            <p class="text-marceau-sand/70 text-[10px] sm:text-[11px]">Custom zippers and buckles that never rust or fade.</p>
+          </div>
+        </div>
+
+        <!-- Leather Texture Macro -->
+        <div class="pt-2 flex items-center space-x-3 sm:space-x-4 p-3 rounded-2xl bg-white/5 border border-white/10">
+          <img src="saved_images/12_leather_texture_macro.jpg" class="w-12 h-12 sm:w-14 sm:h-14 rounded-xl object-cover border border-white/20" alt="Texture Macro" />
+          <div>
+            <p class="text-xs font-semibold text-white">Full-Grain Natural Leather</p>
+            <p class="text-[10px] sm:text-[11px] text-marceau-sand/70">Rich texture with smooth velvety touch</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Workshop Craftsman -->
+      <div class="lg:col-span-6">
+        <div class="rounded-2xl sm:rounded-3xl overflow-hidden border border-white/10 shadow-2xl aspect-[4/3]">
+          <img src="saved_images/10_artisan_leather_workshop.jpg" 
+               alt="Artisan hand-stitching leather bag" 
+               class="w-full h-full object-cover" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- 7. Studio & Contact Section -->
+  <section id="boutique" class="py-12 sm:py-16 px-4 sm:px-6 max-w-7xl mx-auto">
+    <div class="bg-marceau-sand/30 p-6 sm:p-12 rounded-3xl border border-marceau-border grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 items-center">
+      <div class="lg:col-span-5 space-y-3 sm:space-y-4">
+        <span class="text-xs uppercase tracking-widest font-bold text-marceau-cognac">Flagship Studio</span>
+        <h3 class="font-serif text-2xl sm:text-4xl text-marceau-noir">Visit Our Experience Studio</h3>
+        <p class="text-xs text-marceau-linen leading-relaxed">
+          Touch our latest leather collections, get custom initials hot-stamped, and experience personalized styling.
+        </p>
+        <p class="text-xs font-semibold text-marceau-noir">Customer Support: <a href="mailto:support@avaniatelier.in" class="underline hover:text-marceau-cognac">support@avaniatelier.in</a></p>
+      </div>
+      <div class="lg:col-span-7 rounded-2xl overflow-hidden shadow-lg aspect-[16/9] border border-marceau-border">
+        <img src="saved_images/11_atelier_boutique_interior.jpg" 
+             alt="Flagship Boutique Studio Interior" 
+             class="w-full h-full object-cover" />
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. Interactive Cart Drawer -->
+  <div id="cart-drawer-backdrop" onclick="toggleCartDrawer(false)" class="fixed inset-0 bg-black/40 z-50 backdrop-blur-sm opacity-0 pointer-events-none transition-opacity duration-300"></div>
+  
+  <aside id="cart-drawer" class="fixed z-50 bg-white shadow-2xl p-5 sm:p-6 flex flex-col justify-between transition-transform duration-300 ease-in-out bottom-0 inset-x-0 rounded-t-3xl max-h-[85vh] h-auto translate-y-full md:translate-y-0 md:top-0 md:bottom-auto md:right-0 md:left-auto md:h-full md:w-full md:max-w-md md:rounded-t-none md:translate-x-full">
+    <div>
+      <div class="flex items-center justify-between pb-3 sm:pb-4 border-b border-marceau-border">
+        <h3 class="font-serif text-xl sm:text-2xl font-medium text-marceau-noir">Your Shopping Bag</h3>
+        <button onclick="toggleCartDrawer(false)" class="text-xl font-bold p-2 hover:text-marceau-cognac cursor-pointer min-h-[44px]">✕</button>
+      </div>
+      
+      <!-- Cart Items Container -->
+      <div id="cart-items-list" class="py-4 space-y-3 sm:space-y-4 max-h-[50vh] md:max-h-[60vh] overflow-y-auto pr-1">
+        <p class="text-xs text-marceau-linen py-8 text-center">Your shopping bag is currently empty.</p>
+      </div>
+    </div>
+
+    <!-- Cart Summary & Checkout -->
+    <div class="pt-4 border-t border-marceau-border space-y-3 pb-safe">
+      <div class="flex justify-between text-xs text-marceau-linen">
+        <span>All-India Express Shipping</span>
+        <span class="font-semibold text-emerald-700">FREE</span>
+      </div>
+      <div class="flex justify-between text-base font-serif font-bold text-marceau-noir">
+        <span>Total Amount</span>
+        <span id="cart-drawer-total">₹0</span>
+      </div>
+      <button onclick="alert('Redirecting to Secure Payment Gateway (UPI, NetBanking, Cards & COD)...')" class="w-full py-3.5 sm:py-4 rounded-full bg-marceau-noir hover:bg-marceau-cognac text-white text-xs font-semibold uppercase tracking-widest transition shadow-lg cursor-pointer min-h-[48px]">
+        Proceed to Checkout →
+      </button>
+      <p class="text-[10px] text-center text-marceau-linen">UPI • Credit / Debit Cards • NetBanking • Cash on Delivery</p>
+    </div>
+  </aside>
+
+  <!-- 9. Mobile Bottom Navigation Bar (md:hidden) -->
+  <div class="fixed bottom-0 inset-x-0 z-50 md:hidden flex justify-between items-center bg-white/95 backdrop-blur-md px-4 py-2 border-t border-marceau-border pb-safe">
+    <a href="#signature" class="flex flex-col items-center justify-center text-[10px] font-bold text-marceau-noir uppercase tracking-wider min-h-[48px] px-3">
+      <span class="text-base leading-none mb-0.5">✦</span>
+      <span>Campaign</span>
+    </a>
+    <a href="#collection" class="flex flex-col items-center justify-center text-[10px] font-bold text-marceau-noir uppercase tracking-wider min-h-[48px] px-3">
+      <span class="text-base leading-none mb-0.5">☲</span>
+      <span>Catalog</span>
+    </a>
+    <a href="#lifestyle" class="flex flex-col items-center justify-center text-[10px] font-bold text-marceau-noir uppercase tracking-wider min-h-[48px] px-3">
+      <span class="text-base leading-none mb-0.5">✨</span>
+      <span>Lookbook</span>
+    </a>
+    <button onclick="toggleCartDrawer(true)" class="px-4 py-2.5 rounded-full bg-marceau-noir text-white text-xs font-semibold uppercase tracking-wider flex items-center space-x-2 shadow-md cursor-pointer min-h-[44px]">
+      <span>Bag</span>
+      <span id="mobile-cart-counter" class="bg-marceau-cognac text-white w-4 h-4 rounded-full text-[10px] flex items-center justify-center font-bold">0</span>
+    </button>
+  </div>
+
+  <!-- 10. Footer -->
+  <footer class="bg-marceau-sand/40 border-t border-marceau-border pt-12 sm:pt-16 pb-24 md:pb-12 px-4 sm:px-6">
+    <div class="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-4 gap-8 sm:gap-10">
+      <div class="space-y-3">
+        <h4 class="font-serif text-2xl uppercase tracking-widest font-semibold text-marceau-noir">Avani Atelier</h4>
+        <p class="text-xs text-marceau-linen leading-relaxed">
+          Handcrafted luxury genuine leather bags crafted with timeless design and superior Indian artistry.
+        </p>
+      </div>
+      <div>
+        <h5 class="text-xs uppercase tracking-wider font-semibold text-marceau-noir mb-3">Collections</h5>
+        <ul class="text-xs space-y-2 text-marceau-linen">
+          <li><a href="#collection" class="hover:text-marceau-cognac transition">The Trapeze Work Tote</a></li>
+          <li><a href="#collection" class="hover:text-marceau-cognac transition">The Luna Crossbody</a></li>
+          <li><a href="#collection" class="hover:text-marceau-cognac transition">The Nappa Slouch Hobo</a></li>
+          <li><a href="#collection" class="hover:text-marceau-cognac transition">The Evening Party Clutch</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-xs uppercase tracking-wider font-semibold text-marceau-noir mb-3">Customer Support</h5>
+        <ul class="text-xs space-y-2 text-marceau-linen">
+          <li><a href="#" class="hover:text-marceau-cognac transition">Free Delivery & Returns</a></li>
+          <li><a href="#" class="hover:text-marceau-cognac transition">Custom Monogramming</a></li>
+          <li><a href="#" class="hover:text-marceau-cognac transition">Leather Care Guide</a></li>
+          <li><a href="#" class="hover:text-marceau-cognac transition">Quality Warranty</a></li>
+        </ul>
+      </div>
+      <div>
+        <h5 class="text-xs uppercase tracking-wider font-semibold text-marceau-noir mb-3">Newsletter</h5>
+        <p class="text-xs text-marceau-linen mb-3">Subscribe to receive launch updates and exclusive discounts.</p>
+        <div class="flex">
+          <input type="email" placeholder="Your email address..." class="w-full px-3 py-2 text-xs rounded-l-xl bg-white border border-marceau-border focus:outline-none" />
+          <button onclick="alert('Thank you for subscribing to Avani Atelier updates!')" class="px-4 py-2 bg-marceau-noir text-white text-xs font-semibold uppercase rounded-r-xl hover:bg-marceau-cognac transition cursor-pointer min-h-[44px]">
+            Join
+          </button>
+        </div>
+      </div>
+    </div>
+    <div class="max-w-7xl mx-auto border-t border-marceau-border/60 mt-10 sm:mt-12 pt-6 text-[11px] text-marceau-linen flex flex-col sm:flex-row justify-between items-center space-y-2 sm:space-y-0">
+      <span>&copy; 2026 Avani Atelier India. All rights reserved.</span>
+      <span class="font-serif italic text-xs">Handcrafted Luxury Leathercraft • New Delhi & Florence</span>
+    </div>
+  </footer>
+
+  <!-- 11. JavaScript for Card View Switching & Cart -->
+  <script>
+    // Card View Toggle
+    function setCardView(imgId, src) {
+      const img = document.getElementById(imgId);
+      if (img) img.src = src;
+    }
+
+    // Cart Management
+    let cart = [];
+
+    function addToBag(title, price, imgUrl) {
+      const existing = cart.find(item => item.title === title);
+      if (existing) {
+        existing.quantity += 1;
+      } else {
+        cart.push({ title, price, imgUrl, quantity: 1 });
+      }
+      updateCart();
+      toggleCartDrawer(true);
+    }
+
+    function changeQty(index, delta) {
+      cart[index].quantity += delta;
+      if (cart[index].quantity <= 0) cart.splice(index, 1);
+      updateCart();
+    }
+
+    function updateCart() {
+      const totalItems = cart.reduce((s, i) => s + i.quantity, 0);
+      const totalPrice = cart.reduce((s, i) => s + (i.price * i.quantity), 0);
+
+      const navCounter = document.getElementById('nav-cart-counter');
+      if (navCounter) navCounter.innerText = totalItems;
+      document.getElementById('mobile-cart-counter').innerText = totalItems;
+      document.getElementById('cart-drawer-total').innerText = '₹' + totalPrice.toLocaleString('en-IN');
+
+      const listEl = document.getElementById('cart-items-list');
+      if (cart.length === 0) {
+        listEl.innerHTML = '<p class="text-xs text-marceau-linen py-8 text-center">Your shopping bag is currently empty.</p>';
+      } else {
+        listEl.innerHTML = cart.map((item, idx) => `
+          <div class="flex items-center space-x-3 p-3 bg-marceau-sand/30 rounded-2xl border border-marceau-border/60">
+            <img src="${item.imgUrl}" class="w-14 h-14 rounded-xl object-cover bg-white" alt="${item.title}" />
+            <div class="flex-1">
+              <h4 class="font-serif text-sm font-medium text-marceau-noir">${item.title}</h4>
+              <p class="text-xs font-bold text-marceau-cognac">₹${item.price.toLocaleString('en-IN')}</p>
+              <div class="flex items-center space-x-2 mt-1 text-xs">
+                <button onclick="changeQty(${idx}, -1)" class="w-6 h-6 rounded-full bg-white border border-marceau-border flex items-center justify-center font-bold hover:bg-marceau-sand transition cursor-pointer">-</button>
+                <span class="font-semibold px-1">${item.quantity}</span>
+                <button onclick="changeQty(${idx}, 1)" class="w-6 h-6 rounded-full bg-white border border-marceau-border flex items-center justify-center font-bold hover:bg-marceau-sand transition cursor-pointer">+</button>
+              </div>
+            </div>
+            <button onclick="changeQty(${idx}, -${item.quantity})" class="text-xs text-marceau-linen hover:text-red-600 p-1 cursor-pointer">✕</button>
+          </div>
+        `).join('');
+      }
+    }
+
+    function toggleCartDrawer(open) {
+      const drawer = document.getElementById('cart-drawer');
+      const backdrop = document.getElementById('cart-drawer-backdrop');
+      if (open) {
+        drawer.classList.remove('translate-y-full', 'md:translate-x-full');
+        backdrop.classList.remove('opacity-0', 'pointer-events-none');
+      } else {
+        drawer.classList.add('translate-y-full', 'md:translate-x-full');
+        backdrop.classList.add('opacity-0', 'pointer-events-none');
+      }
+    }
+
+    function filterBags(category) {
+      const items = document.querySelectorAll('.product-item');
+      items.forEach(item => {
+        if (category === 'all' || item.getAttribute('data-category') === category) {
+          item.style.display = 'flex';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+
+      // Update Active Tab Styles
+      ['all', 'crossbody', 'tote', 'hobo', 'evening'].forEach(c => {
+        const tab = document.getElementById('tab-' + c);
+        if (tab) {
+          if (c === category) {
+            tab.className = "px-4 py-2 rounded-full bg-marceau-noir text-marceau-bone text-xs font-semibold tracking-wider uppercase transition cursor-pointer min-h-[44px]";
+          } else {
+            tab.className = "px-4 py-2 rounded-full bg-marceau-sand/70 text-marceau-noir text-xs font-semibold tracking-wider uppercase hover:bg-marceau-sand transition cursor-pointer min-h-[44px]";
+          }
+        }
+      });
+    }
+  </script>
+
+</body>
+</html>
